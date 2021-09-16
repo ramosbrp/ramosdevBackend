@@ -1,8 +1,8 @@
-import express, { Request, Response } from 'express';
-const mongoose =  require ('mongoose');
+const express = require('express');
+const mongoose =  require('mongoose');
 const cors = require('cors');
-const routes = require ('./routes');
-const dotenv = require ('dotenv');
+const routes = require('./routes');
+const dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -28,7 +28,7 @@ mongoose.connect(`${uri}`, {
 
 app.use(routes);
 
-app.listen(3000, ()=> {
+app.listen(port, ()=> {
     console.log(`Server runing on port ${port}`);
     
 });
